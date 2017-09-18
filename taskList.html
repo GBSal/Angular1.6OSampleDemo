@@ -1,0 +1,6 @@
+<div>
+    <div class="title">{{model.title}}</div>
+    <ul ng-if="model.tasks">
+        <li ng-repeat="task in model.tasks"> {{task.title}} </li>
+    </ul>
+</div>
