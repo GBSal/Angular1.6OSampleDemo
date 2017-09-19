@@ -1,13 +1,27 @@
 var app = angular.module("appDemo", ['ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
+     $locationProvider.hashPrefix('');
+    
     $routeProvider
-        .when('/tasks',
+        .when('/',
             {
-                controller: 'TasksController',
-                templateUrl: "taskList.html"
+                template:"welcome to quick demo",
+                controller:function(){
+                    console.log("default root path");
+                }
             })
-        .otherwise({ redirectTo: '/home' });
+            .when('/tasks',
+            {
+                template:"Task List will show here.",
+                controller:function(){
+                    console.log ("task controller running.")
+                }
+            })
+            .when('/home', {
+                redirectTo:'/'
+            })
+        
 });
 
 

@@ -1,4 +1,4 @@
-<html ng-app="appDemo">
+<html >
 
 <head>
     <title>Quick Start Angularjs Demo </title>
@@ -6,7 +6,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
 </head>
 
-<body>
+<body ng-app="appDemo">
 <div>
 <ul>
     <li><a href="#/home">Home</a></li>
@@ -17,6 +17,7 @@
 </div>
 
 <div class="container">
+    
     <div ng-view></div>
 </div>
 
